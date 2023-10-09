@@ -6,6 +6,7 @@ import Team from "./views/team";
 import Contacts from "./views/contacts";
 import Invoices from "./views/invoices";
 import Form from "./views/form";
+import Calendar from "./views/calendar";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/invoices" element={<Invoices />} />
               <Route path="/form" element={<Form />} />
+              <Route path="/calendar" element={<Calendar />} />
             </Routes>
           </main>
         </div>
