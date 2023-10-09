@@ -1,16 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&family=Quicksand:wght@400;600;700&family=Rubik:wght@300;500;700&family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&family=Sen:wght@400;600;700;800&display=swap");
 *,
 :root {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", "Sen", sans-serif;
 }
 
 html,
 body {
   height: 100%;
   width: 100%;
-  font-family: "Nunito", "Quicksand", sans-serif;
 }
 
 body {
