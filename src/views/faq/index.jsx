@@ -11,7 +11,7 @@ const Faq = () => {
   return (
     <Box m="20px">
       <Title title="FAQ" subtitle="Frequently asked questions Page" />
-      <Accordion defaultExpanded>
+      <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -26,7 +26,7 @@ const Faq = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion defaultExpanded>
+      <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -41,7 +41,7 @@ const Faq = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion defaultExpanded>
+      <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -56,7 +56,7 @@ const Faq = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion defaultExpanded>
+      <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -71,7 +71,7 @@ const Faq = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion defaultExpanded>
+      <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
