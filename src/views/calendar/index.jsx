@@ -3,7 +3,7 @@ import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
 // import interactionPlugin from "@fullcalendar/interaction"; // needed for dayClick
 import { Box, List, ListItem, ListItemText, Typography } from "@mui/material";
-import Title from "../../components/title";
+import Title from "../../components/Title";
 
 const Calendar = () => {
   return (

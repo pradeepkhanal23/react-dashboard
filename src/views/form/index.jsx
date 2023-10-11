@@ -1,7 +1,7 @@
 import { Formik } from "formik";
 import { Box, Button, TextField } from "@mui/material";
 import * as yup from "yup";
-import Title from "../../components/title";
+import Title from "../../components/Title";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Form = () => {

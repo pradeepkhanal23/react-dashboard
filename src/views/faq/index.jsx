@@ -5,7 +5,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Box } from "@mui/system";
-import Title from "../../components/title";
+import Title from "../../components/Title";
 
 const Faq = () => {
   return (

@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import Title from "../../components/title";
+import Title from "../../components/Title";
 import LineChart from "../../components/LineChart";
 
 const Line = () => {
