@@ -8,7 +8,7 @@ const StatBox = ({ title, subtitle, icon, progress, increase }) => {
       <Box display="flex" justifyContent="space-between">
         <Box>
           {icon}
-          <Typography variant="h4" fontWeight="bold">
+          <Typography variant="h4" fontWeight="bold" color="green">
             {title}
           </Typography>
         </Box>
@@ -16,9 +16,14 @@ const StatBox = ({ title, subtitle, icon, progress, increase }) => {
           <ProgressCircle progress={progress} />
         </Box>
       </Box>
-      <Box display="flex" justifyContent="space-between" mt="2px">
-        <Typography variant="h5">{subtitle}</Typography>
-        <Typography variant="h5" fontStyle="italic">
+      <Box
+        display="flex"
+        justifyContent="space-between"
+        mt="2px"
+        color="#504099"
+      >
+        <Typography variant="h6">{subtitle}</Typography>
+        <Typography variant="h6" fontStyle="italic">
           {increase}
         </Typography>
       </Box>

@@ -12,6 +12,8 @@ import LineChart from "../../components/LineChart";
 import BarChart from "../../components/BarChart";
 import GeoChart from "../../components/GeoChart";
 
+const customShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px;";
+
 const Dashboard = () => {
   return (
     <Box m="20px">
@@ -22,7 +24,7 @@ const Dashboard = () => {
         <Box>
           <Button
             sx={{
-              fontSize: "14px",
+              fontSize: "20px",
               fontWeight: "bold",
               padding: "10px 20px",
             }}
@@ -37,7 +39,7 @@ const Dashboard = () => {
       <Box
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
-        gridAutoRows="140px"
+        gridAutoRows="150px"
         gap="20px"
       >
         {/* ROW 1 */}
@@ -46,13 +48,17 @@ const Dashboard = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          sx={{
+            padding: "10px 5px",
+            boxShadow: customShadow,
+          }}
         >
           <StatBox
             title="12,361"
             subtitle="Emails Sent"
             progress="0.75"
             increase="+14%"
-            icon={<EmailIcon sx={{ fontSize: "26px" }} />}
+            icon={<EmailIcon sx={{ fontSize: "30px" }} />}
           />
         </Box>
         <Box
@@ -60,13 +66,17 @@ const Dashboard = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          sx={{
+            padding: "10px 5px",
+            boxShadow: customShadow,
+          }}
         >
           <StatBox
             title="431,225"
             subtitle="Sales Obtained"
             progress="0.50"
             increase="+21%"
-            icon={<PointOfSaleIcon sx={{ fontSize: "26px" }} />}
+            icon={<PointOfSaleIcon sx={{ fontSize: "30px" }} />}
           />
         </Box>
         <Box
@@ -74,13 +84,17 @@ const Dashboard = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          sx={{
+            padding: "10px 5px",
+            boxShadow: customShadow,
+          }}
         >
           <StatBox
             title="32,441"
             subtitle="New Clients"
             progress="0.30"
             increase="+5%"
-            icon={<PersonAddIcon sx={{ fontSize: "26px" }} />}
+            icon={<PersonAddIcon sx={{ fontSize: "30px" }} />}
           />
         </Box>
         <Box
@@ -88,13 +102,17 @@ const Dashboard = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          sx={{
+            padding: "10px 5px",
+            boxShadow: customShadow,
+          }}
         >
           <StatBox
             title="1,325,134"
             subtitle="Traffic Received"
             progress="0.80"
             increase="+43%"
-            icon={<TrafficIcon sx={{ fontSize: "26px" }} />}
+            icon={<TrafficIcon sx={{ fontSize: "30px" }} />}
           />
         </Box>
 
@@ -107,33 +125,40 @@ const Dashboard = () => {
             justifyContent="space-between"
             alignItems="center"
           >
-            <Box>
+            <Box mb={4}>
               <Typography variant="h5" fontWeight="600">
                 Revenue Generated
               </Typography>
-              <Typography variant="h3" fontWeight="bold">
+              <Typography variant="h4" fontWeight="bold">
                 $59,342.32
               </Typography>
             </Box>
             <Box>
               <IconButton>
-                <DownloadOutlinedIcon sx={{ fontSize: "26px" }} />
+                <DownloadOutlinedIcon sx={{ fontSize: "50px" }} />
               </IconButton>
             </Box>
           </Box>
           <Box height="250px" m="-20px 0 0 0">
-            <LineChart isDashboard={true} />
+            <LineChart />
           </Box>
         </Box>
-        <Box gridColumn="span 4" gridRow="span 2" overflow="auto">
+        <Box
+          gridColumn="span 4"
+          gridRow="span 2"
+          overflow="auto"
+          boxShadow={customShadow}
+          padding="20px"
+          borderRadius="20px"
+        >
           <Box
             display="flex"
             justifyContent="space-between"
             alignItems="center"
-            borderBottom={`4px solid black`}
+            borderBottom={`3px solid green`}
             p="15px"
           >
-            <Typography variant="h5" fontWeight="600">
+            <Typography variant="h5" fontWeight="600" textTransform="uppercase">
               Recent Transactions
             </Typography>
           </Box>
@@ -143,7 +168,7 @@ const Dashboard = () => {
               display="flex"
               justifyContent="space-between"
               alignItems="center"
-              borderBottom={`4px solid black`}
+              borderBottom={`3px solid black`}
               p="15px"
             >
               <Box>
@@ -162,7 +187,7 @@ const Dashboard = () => {
 
         {/* ROW 3 */}
         <Box gridColumn="span 4" gridRow="span 2" p="30px">
-          <Typography variant="h5" fontWeight="600">
+          <Typography variant="h5" fontWeight="600" textTransform="uppercase">
             Campaign
           </Typography>
           <Box
@@ -182,24 +207,22 @@ const Dashboard = () => {
           <Typography
             variant="h5"
             fontWeight="600"
+            textTransform="uppercase"
             sx={{ padding: "30px 30px 0 30px" }}
+            mb={3}
           >
             Sales Quantity
           </Typography>
           <Box height="250px" mt="-20px">
-            <BarChart isDashboard={true} />
+            <BarChart />
           </Box>
         </Box>
         <Box gridColumn="span 4" gridRow="span 2" padding="30px">
-          <Typography
-            variant="h5"
-            fontWeight="600"
-            sx={{ marginBottom: "15px" }}
-          >
+          <Typography variant="h5" fontWeight="600" textTransform="uppercase">
             Geography Based Traffic
           </Typography>
           <Box height="200px">
-            <GeoChart isDashboard={true} />
+            <GeoChart />
           </Box>
         </Box>
       </Box>
