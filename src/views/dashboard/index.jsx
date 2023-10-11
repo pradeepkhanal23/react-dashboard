@@ -12,7 +12,8 @@ import LineChart from "../../components/LineChart";
 import BarChart from "../../components/BarChart";
 import GeoChart from "../../components/GeoChart";
 
-const customShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px;";
+const customShadow =
+  "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px";
 
 const Dashboard = () => {
   return (
@@ -186,7 +187,13 @@ const Dashboard = () => {
         </Box>
 
         {/* ROW 3 */}
-        <Box gridColumn="span 4" gridRow="span 2" p="30px">
+        <Box
+          gridColumn="span 4"
+          gridRow="span 2"
+          p="10px 30px"
+          boxShadow={customShadow}
+          mt={5}
+        >
           <Typography variant="h5" fontWeight="600" textTransform="uppercase">
             Campaign
           </Typography>
@@ -217,8 +224,13 @@ const Dashboard = () => {
             <BarChart />
           </Box>
         </Box>
-        <Box gridColumn="span 4" gridRow="span 2" padding="30px">
-          <Typography variant="h5" fontWeight="600" textTransform="uppercase">
+        <Box gridColumn="span 4" gridRow="span 2" padding="10px">
+          <Typography
+            variant="h5"
+            fontWeight="600"
+            textTransform="uppercase"
+            mb={2}
+          >
             Geography Based Traffic
           </Typography>
           <Box height="200px">
