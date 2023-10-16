@@ -317,46 +317,109 @@ export const mockTransactions = [
 
 export const mockBarData = [
   {
-    name: "Page A",
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
+    country: "AD",
+    "hot dog": 17,
+    "hot dogColor": "hsl(1, 70%, 50%)",
+    burger: 63,
+    burgerColor: "hsl(90, 70%, 50%)",
+    sandwich: 41,
+    sandwichColor: "hsl(77, 70%, 50%)",
+    kebab: 176,
+    kebabColor: "hsl(61, 70%, 50%)",
+    fries: 39,
+    friesColor: "hsl(93, 70%, 50%)",
+    donut: 151,
+    donutColor: "hsl(22, 70%, 50%)",
   },
   {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
+    country: "AE",
+    "hot dog": 114,
+    "hot dogColor": "hsl(95, 70%, 50%)",
+    burger: 157,
+    burgerColor: "hsl(306, 70%, 50%)",
+    sandwich: 154,
+    sandwichColor: "hsl(215, 70%, 50%)",
+    kebab: 159,
+    kebabColor: "hsl(7, 70%, 50%)",
+    fries: 24,
+    friesColor: "hsl(102, 70%, 50%)",
+    donut: 110,
+    donutColor: "hsl(345, 70%, 50%)",
   },
   {
-    name: "Page C",
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
+    country: "AF",
+    "hot dog": 107,
+    "hot dogColor": "hsl(340, 70%, 50%)",
+    burger: 165,
+    burgerColor: "hsl(306, 70%, 50%)",
+    sandwich: 65,
+    sandwichColor: "hsl(15, 70%, 50%)",
+    kebab: 35,
+    kebabColor: "hsl(164, 70%, 50%)",
+    fries: 174,
+    friesColor: "hsl(176, 70%, 50%)",
+    donut: 107,
+    donutColor: "hsl(351, 70%, 50%)",
   },
   {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
+    country: "AG",
+    "hot dog": 12,
+    "hot dogColor": "hsl(147, 70%, 50%)",
+    burger: 54,
+    burgerColor: "hsl(160, 70%, 50%)",
+    sandwich: 88,
+    sandwichColor: "hsl(233, 70%, 50%)",
+    kebab: 129,
+    kebabColor: "hsl(304, 70%, 50%)",
+    fries: 79,
+    friesColor: "hsl(110, 70%, 50%)",
+    donut: 3,
+    donutColor: "hsl(155, 70%, 50%)",
   },
   {
-    name: "Page E",
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
+    country: "AI",
+    "hot dog": 161,
+    "hot dogColor": "hsl(239, 70%, 50%)",
+    burger: 48,
+    burgerColor: "hsl(184, 70%, 50%)",
+    sandwich: 24,
+    sandwichColor: "hsl(68, 70%, 50%)",
+    kebab: 155,
+    kebabColor: "hsl(242, 70%, 50%)",
+    fries: 38,
+    friesColor: "hsl(181, 70%, 50%)",
+    donut: 71,
+    donutColor: "hsl(191, 70%, 50%)",
   },
   {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
+    country: "AL",
+    "hot dog": 194,
+    "hot dogColor": "hsl(246, 70%, 50%)",
+    burger: 75,
+    burgerColor: "hsl(324, 70%, 50%)",
+    sandwich: 84,
+    sandwichColor: "hsl(245, 70%, 50%)",
+    kebab: 111,
+    kebabColor: "hsl(95, 70%, 50%)",
+    fries: 83,
+    friesColor: "hsl(95, 70%, 50%)",
+    donut: 161,
+    donutColor: "hsl(91, 70%, 50%)",
   },
   {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
+    country: "AM",
+    "hot dog": 200,
+    "hot dogColor": "hsl(49, 70%, 50%)",
+    burger: 50,
+    burgerColor: "hsl(238, 70%, 50%)",
+    sandwich: 183,
+    sandwichColor: "hsl(322, 70%, 50%)",
+    kebab: 125,
+    kebabColor: "hsl(141, 70%, 50%)",
+    fries: 84,
+    friesColor: "hsl(134, 70%, 50%)",
+    donut: 84,
+    donutColor: "hsl(221, 70%, 50%)",
   },
 ];
 
@@ -395,46 +458,274 @@ export const mockPieData = [
 
 export const mockLineData = [
   {
-    name: "Page A",
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
+    id: "japan",
+    color: "hsl(73, 70%, 50%)",
+    data: [
+      {
+        x: "plane",
+        y: 129,
+      },
+      {
+        x: "helicopter",
+        y: 281,
+      },
+      {
+        x: "boat",
+        y: 236,
+      },
+      {
+        x: "train",
+        y: 40,
+      },
+      {
+        x: "subway",
+        y: 100,
+      },
+      {
+        x: "bus",
+        y: 201,
+      },
+      {
+        x: "car",
+        y: 169,
+      },
+      {
+        x: "moto",
+        y: 198,
+      },
+      {
+        x: "bicycle",
+        y: 184,
+      },
+      {
+        x: "horse",
+        y: 158,
+      },
+      {
+        x: "skateboard",
+        y: 99,
+      },
+      {
+        x: "others",
+        y: 77,
+      },
+    ],
   },
   {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
+    id: "france",
+    color: "hsl(257, 70%, 50%)",
+    data: [
+      {
+        x: "plane",
+        y: 109,
+      },
+      {
+        x: "helicopter",
+        y: 83,
+      },
+      {
+        x: "boat",
+        y: 75,
+      },
+      {
+        x: "train",
+        y: 273,
+      },
+      {
+        x: "subway",
+        y: 146,
+      },
+      {
+        x: "bus",
+        y: 242,
+      },
+      {
+        x: "car",
+        y: 21,
+      },
+      {
+        x: "moto",
+        y: 73,
+      },
+      {
+        x: "bicycle",
+        y: 285,
+      },
+      {
+        x: "horse",
+        y: 239,
+      },
+      {
+        x: "skateboard",
+        y: 19,
+      },
+      {
+        x: "others",
+        y: 130,
+      },
+    ],
   },
   {
-    name: "Page C",
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
+    id: "us",
+    color: "hsl(178, 70%, 50%)",
+    data: [
+      {
+        x: "plane",
+        y: 80,
+      },
+      {
+        x: "helicopter",
+        y: 166,
+      },
+      {
+        x: "boat",
+        y: 118,
+      },
+      {
+        x: "train",
+        y: 91,
+      },
+      {
+        x: "subway",
+        y: 185,
+      },
+      {
+        x: "bus",
+        y: 181,
+      },
+      {
+        x: "car",
+        y: 236,
+      },
+      {
+        x: "moto",
+        y: 281,
+      },
+      {
+        x: "bicycle",
+        y: 220,
+      },
+      {
+        x: "horse",
+        y: 141,
+      },
+      {
+        x: "skateboard",
+        y: 24,
+      },
+      {
+        x: "others",
+        y: 218,
+      },
+    ],
   },
   {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
+    id: "germany",
+    color: "hsl(28, 70%, 50%)",
+    data: [
+      {
+        x: "plane",
+        y: 192,
+      },
+      {
+        x: "helicopter",
+        y: 255,
+      },
+      {
+        x: "boat",
+        y: 131,
+      },
+      {
+        x: "train",
+        y: 26,
+      },
+      {
+        x: "subway",
+        y: 260,
+      },
+      {
+        x: "bus",
+        y: 40,
+      },
+      {
+        x: "car",
+        y: 82,
+      },
+      {
+        x: "moto",
+        y: 95,
+      },
+      {
+        x: "bicycle",
+        y: 95,
+      },
+      {
+        x: "horse",
+        y: 91,
+      },
+      {
+        x: "skateboard",
+        y: 132,
+      },
+      {
+        x: "others",
+        y: 275,
+      },
+    ],
   },
   {
-    name: "Page E",
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
+    id: "norway",
+    color: "hsl(52, 70%, 50%)",
+    data: [
+      {
+        x: "plane",
+        y: 41,
+      },
+      {
+        x: "helicopter",
+        y: 198,
+      },
+      {
+        x: "boat",
+        y: 101,
+      },
+      {
+        x: "train",
+        y: 226,
+      },
+      {
+        x: "subway",
+        y: 51,
+      },
+      {
+        x: "bus",
+        y: 30,
+      },
+      {
+        x: "car",
+        y: 169,
+      },
+      {
+        x: "moto",
+        y: 281,
+      },
+      {
+        x: "bicycle",
+        y: 147,
+      },
+      {
+        x: "horse",
+        y: 116,
+      },
+      {
+        x: "skateboard",
+        y: 17,
+      },
+      {
+        x: "others",
+        y: 174,
+      },
+    ],
   },
 ];
 

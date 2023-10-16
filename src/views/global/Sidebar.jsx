@@ -61,13 +61,15 @@ const Sidebar = () => {
           "& .pro-menu-item.active": {
             color: "#6870fa !important",
           },
+          height: "100vh",
+          position: "sticky",
+          display: "flex",
+          top: 0,
+          bottom: 0,
+          zIndex: 10000,
         }}
       >
-        <ProSidebar
-          collapsed={isCollapsed}
-          breakPoint="sm"
-          // backgroundColor="colors.primary[400]"
-        >
+        <ProSidebar collapsed={isCollapsed} breakPoint="sm">
           <Menu iconShape="square">
             {/* Logo and menu icon */}
             <MenuItem

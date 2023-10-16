@@ -1,8 +1,8 @@
-/* eslint-disable react/prop-types */
 import { Box, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 
-const ProgressCircle = ({ progress = "0.75", size = "70" }) => {
+// eslint-disable-next-line react/prop-types
+const ProgressCircle = ({ progress = "0.75", size = "50" }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const angle = progress * 360;
@@ -19,4 +19,5 @@ const ProgressCircle = ({ progress = "0.75", size = "70" }) => {
     />
   );
 };
+
 export default ProgressCircle;
