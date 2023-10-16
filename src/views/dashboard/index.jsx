@@ -17,6 +17,9 @@ const Dashboard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
+  const customShadow =
+    " rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;";
+
   return (
     <Box m="20px">
       {/* HEADER */}
@@ -44,7 +47,7 @@ const Dashboard = () => {
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
         gridAutoRows="140px"
-        gap="20px"
+        gap="14px"
       >
         {/* ROW 1 */}
         <Box
@@ -53,6 +56,9 @@ const Dashboard = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          sx={{
+            boxShadow: customShadow,
+          }}
         >
           <StatBox
             title="12,361"
@@ -72,6 +78,9 @@ const Dashboard = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          sx={{
+            boxShadow: customShadow,
+          }}
         >
           <StatBox
             title="431,225"
@@ -91,6 +100,9 @@ const Dashboard = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          sx={{
+            boxShadow: customShadow,
+          }}
         >
           <StatBox
             title="32,441"
@@ -110,6 +122,9 @@ const Dashboard = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          sx={{
+            boxShadow: customShadow,
+          }}
         >
           <StatBox
             title="1,325,134"
@@ -129,6 +144,9 @@ const Dashboard = () => {
           gridColumn="span 8"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
+          sx={{
+            boxShadow: customShadow,
+          }}
         >
           <Box
             mt="25px"
@@ -170,6 +188,9 @@ const Dashboard = () => {
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
           overflow="auto"
+          sx={{
+            boxShadow: customShadow,
+          }}
         >
           <Box
             display="flex"
@@ -222,6 +243,9 @@ const Dashboard = () => {
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
           p="30px"
+          sx={{
+            boxShadow: customShadow,
+          }}
         >
           <Typography variant="h5" fontWeight="600">
             Campaign
@@ -247,6 +271,9 @@ const Dashboard = () => {
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
+          sx={{
+            boxShadow: customShadow,
+          }}
         >
           <Typography
             variant="h5"
@@ -264,6 +291,9 @@ const Dashboard = () => {
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
           padding="30px"
+          sx={{
+            boxShadow: customShadow,
+          }}
         >
           <Typography
             variant="h5"

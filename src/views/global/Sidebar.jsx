@@ -15,6 +15,7 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import CloseIcon from "@mui/icons-material/Close";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 
@@ -59,7 +60,7 @@ const Sidebar = () => {
             color: "#868dfb !important",
           },
           "& .pro-menu-item.active": {
-            color: "#6870fa !important",
+            color: `${colors.greenAccent[400]} !important`,
           },
           height: "100vh",
           position: "sticky",
@@ -67,6 +68,8 @@ const Sidebar = () => {
           top: 0,
           bottom: 0,
           zIndex: 10000,
+          boxShadow:
+            " rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;",
         }}
       >
         <ProSidebar collapsed={isCollapsed} breakPoint="sm">
@@ -90,7 +93,7 @@ const Sidebar = () => {
                     DASHBOARD
                   </Typography>
                   <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
-                    <MenuOutlinedIcon />
+                    {!isCollapsed ? <CloseIcon /> : <MenuOutlinedIcon />}
                   </IconButton>
                 </Box>
               )}
@@ -105,11 +108,12 @@ const Sidebar = () => {
                     alt="profile-user"
                     width="70px"
                     height="70px"
-                    src={`../../../public/assets/user.png`}
+                    src={`../../../src/assets/UserImage.PNG`}
                     style={{
                       cursor: "pointer",
                       borderRadius: "50%",
                       objectFit: "cover",
+                      border: `2px solid ${colors.grey[100]}`,
                     }}
                   />
                 </Box>

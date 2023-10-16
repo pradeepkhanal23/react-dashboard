@@ -77,13 +77,14 @@ export const tokens = (mode) => ({
           100: "#040509",
           200: "#080b12",
           300: "#0c101b",
-          400: "#f2f0f0", // manually changed
+          400: "#F5F5F5", // manually changed
           500: "#141b2d",
           600: "#1F2A40",
           700: "#727681",
           800: "#a1a4ab",
           900: "#d0d1d5",
         },
+        //Original
         greenAccent: {
           100: "#0f2922",
           200: "#1e5245",
@@ -95,6 +96,7 @@ export const tokens = (mode) => ({
           800: "#b7ebde",
           900: "#dbf5ee",
         },
+
         redAccent: {
           100: "#2c100f",
           200: "#58201e",
