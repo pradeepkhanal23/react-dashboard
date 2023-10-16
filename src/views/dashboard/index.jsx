@@ -1,4 +1,4 @@
-import { Box, Button, IconButton, Typography } from "@mui/material";
+import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import { mockTransactions } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import EmailIcon from "@mui/icons-material/Email";
@@ -11,11 +11,14 @@ import StatBox from "../../components/StatBox";
 import LineChart from "../../components/LineChart";
 import BarChart from "../../components/BarChart";
 import GeoChart from "../../components/GeoChart";
+import { tokens } from "../../../theme";
 
 const customShadow =
   "rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px";
 
 const Dashboard = () => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   return (
     <Box m="20px">
       {/* HEADER */}
@@ -25,6 +28,8 @@ const Dashboard = () => {
         <Box>
           <Button
             sx={{
+              backgroundColor: colors.blueAccent[700],
+              color: colors.grey[100],
               fontSize: "16px",
               fontWeight: "bold",
               padding: "5px 10px",
@@ -46,6 +51,7 @@ const Dashboard = () => {
         {/* ROW 1 */}
         <Box
           gridColumn="span 3"
+          backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
           justifyContent="center"
@@ -59,11 +65,16 @@ const Dashboard = () => {
             subtitle="Emails Sent"
             progress="0.75"
             increase="+14%"
-            icon={<EmailIcon sx={{ fontSize: "30px" }} />}
+            icon={
+              <EmailIcon
+                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+              />
+            }
           />
         </Box>
         <Box
           gridColumn="span 3"
+          backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
           justifyContent="center"
@@ -77,11 +88,16 @@ const Dashboard = () => {
             subtitle="Sales Obtained"
             progress="0.50"
             increase="+21%"
-            icon={<PointOfSaleIcon sx={{ fontSize: "30px" }} />}
+            icon={
+              <PointOfSaleIcon
+                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+              />
+            }
           />
         </Box>
         <Box
           gridColumn="span 3"
+          backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
           justifyContent="center"
@@ -95,11 +111,16 @@ const Dashboard = () => {
             subtitle="New Clients"
             progress="0.30"
             increase="+5%"
-            icon={<PersonAddIcon sx={{ fontSize: "30px" }} />}
+            icon={
+              <PersonAddIcon
+                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+              />
+            }
           />
         </Box>
         <Box
           gridColumn="span 3"
+          backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
           justifyContent="center"
@@ -113,12 +134,20 @@ const Dashboard = () => {
             subtitle="Traffic Received"
             progress="0.80"
             increase="+43%"
-            icon={<TrafficIcon sx={{ fontSize: "30px" }} />}
+            icon={
+              <TrafficIcon
+                sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+              />
+            }
           />
         </Box>
 
         {/* ROW 2 */}
-        <Box gridColumn="span 8" gridRow="span 2">
+        <Box
+          gridColumn="span 8"
+          gridRow="span 2"
+          backgroundColor={colors.primary[400]}
+        >
           <Box
             mt="25px"
             p="0 30px"
@@ -127,16 +156,26 @@ const Dashboard = () => {
             alignItems="center"
           >
             <Box mb={4}>
-              <Typography variant="h5" fontWeight="600">
+              <Typography
+                variant="h5"
+                fontWeight="600"
+                color={colors.grey[100]}
+              >
                 Revenue Generated
               </Typography>
-              <Typography variant="h6" fontWeight="bold">
+              <Typography
+                variant="h6"
+                fontWeight="bold"
+                color={colors.greenAccent[500]}
+              >
                 $59,342.32
               </Typography>
             </Box>
             <Box>
               <IconButton>
-                <DownloadOutlinedIcon sx={{ fontSize: "30px" }} />
+                <DownloadOutlinedIcon
+                  sx={{ fontSize: "26px", color: colors.greenAccent[500] }}
+                />
               </IconButton>
             </Box>
           </Box>
@@ -146,6 +185,7 @@ const Dashboard = () => {
         </Box>
         <Box
           gridColumn="span 4"
+          backgroundColor={colors.primary[400]}
           gridRow="span 2"
           overflow="auto"
           boxShadow={customShadow}
@@ -156,10 +196,16 @@ const Dashboard = () => {
             display="flex"
             justifyContent="space-between"
             alignItems="center"
-            borderBottom={`3px solid green`}
             p="15px"
+            borderBottom={`4px solid ${colors.primary[500]}`}
+            colors={colors.grey[100]}
           >
-            <Typography variant="h6" fontWeight="600" textTransform="uppercase">
+            <Typography
+              variant="h6"
+              fontWeight="600"
+              textTransform="uppercase"
+              color={colors.grey[100]}
+            >
               Recent Transactions
             </Typography>
           </Box>
@@ -169,17 +215,27 @@ const Dashboard = () => {
               display="flex"
               justifyContent="space-between"
               alignItems="center"
-              borderBottom={`3px solid black`}
+              borderBottom={`4px solid ${colors.primary[500]}`}
               p="15px"
             >
               <Box>
-                <Typography variant="h6" fontWeight="600">
+                <Typography
+                  variant="h6"
+                  fontWeight="600"
+                  color={colors.greenAccent[500]}
+                >
                   {transaction.txId}
                 </Typography>
-                <Typography>{transaction.user}</Typography>
+                <Typography color={colors.grey[100]}>
+                  {transaction.user}
+                </Typography>
               </Box>
-              <Box>{transaction.date}</Box>
-              <Box p="5px 10px" borderRadius="4px">
+              <Box color={colors.grey[100]}>{transaction.date}</Box>
+              <Box
+                backgroundColor={colors.greenAccent[500]}
+                p="5px 10px"
+                borderRadius="4px"
+              >
                 ${transaction.cost}
               </Box>
             </Box>
@@ -191,6 +247,7 @@ const Dashboard = () => {
           gridColumn="span 4"
           gridRow="span 2"
           p="10px 30px"
+          backgroundColor={colors.primary[400]}
           boxShadow={customShadow}
           mt={5}
         >
@@ -204,13 +261,21 @@ const Dashboard = () => {
             mt="25px"
           >
             <ProgressCircle size="125" />
-            <Typography variant="h5" sx={{ mt: "15px" }}>
+            <Typography
+              variant="h5"
+              sx={{ mt: "15px" }}
+              color={colors.greenAccent[500]}
+            >
               $48,352 revenue generated
             </Typography>
             <Typography>Includes extra misc expenditures and costs</Typography>
           </Box>
         </Box>
-        <Box gridColumn="span 4" gridRow="span 2">
+        <Box
+          gridColumn="span 4"
+          gridRow="span 2"
+          backgroundColor={colors.primary[400]}
+        >
           <Typography
             variant="h6"
             fontWeight="600"
@@ -224,7 +289,12 @@ const Dashboard = () => {
             <BarChart />
           </Box>
         </Box>
-        <Box gridColumn="span 4" gridRow="span 2" padding="10px">
+        <Box
+          gridColumn="span 4"
+          gridRow="span 2"
+          padding="10px"
+          backgroundColor={colors.primary[400]}
+        >
           <Typography
             variant="h6"
             fontWeight="600"

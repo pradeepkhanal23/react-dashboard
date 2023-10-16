@@ -1,9 +1,12 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { mockDataInvoices } from "../../data/mockData";
 import Title from "../../components/Title";
+import { tokens } from "../../../theme";
 
 const Invoices = () => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   const columns = [
     { field: "id", headerName: "ID" },
     {
@@ -27,7 +30,9 @@ const Invoices = () => {
       headerName: "Cost",
       flex: 1,
       renderCell: (params) => (
-        <Typography color="#764abc">${params.row.cost}</Typography>
+        <Typography color={colors.greenAccent[500]}>
+          ${params.row.cost}
+        </Typography>
       ),
     },
     {
@@ -43,31 +48,27 @@ const Invoices = () => {
       <Box
         sx={{
           "& .MuiDataGrid-root": {
-            border: "1px solid #e0e0e0",
-            marginTop: "5px",
+            border: "none",
           },
           "& .MuiDataGrid-cell": {
             borderBottom: "none",
           },
           "& .name-column--cell": {
-            border: "none",
+            color: colors.greenAccent[300],
           },
           "& .MuiDataGrid-columnHeaders": {
-            backgroundColor: "#764abc ",
-            color: "white",
+            backgroundColor: colors.blueAccent[700],
             borderBottom: "none",
           },
           "& .MuiDataGrid-virtualScroller": {
-            backgroundColor: "transparent",
+            backgroundColor: colors.primary[400],
           },
           "& .MuiDataGrid-footerContainer": {
-            backgroundColor: "none ",
+            borderTop: "none",
+            backgroundColor: colors.blueAccent[700],
           },
           "& .MuiCheckbox-root": {
-            color: "#764abc",
-          },
-          "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
-            color: "#764abc",
+            color: `${colors.greenAccent[200]} !important`,
           },
         }}
       >

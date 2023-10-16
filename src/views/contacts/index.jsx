@@ -2,8 +2,12 @@ import { Box } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { mockDataContacts } from "../../data/mockData";
 import Title from "../../components/Title";
+import { tokens } from "../../../theme";
+import { useTheme } from "@mui/material";
 
 const Contacts = () => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   const columns = [
     { field: "id", headerName: "ID", flex: 0.5 },
     { field: "registrarId", headerName: "Registrar ID" },
@@ -56,31 +60,30 @@ const Contacts = () => {
       <Box
         sx={{
           "& .MuiDataGrid-root": {
-            border: "1px solid #e0e0e0",
-            marginTop: "5px",
+            border: "none",
           },
           "& .MuiDataGrid-cell": {
             borderBottom: "none",
           },
           "& .name-column--cell": {
-            border: "none",
+            color: colors.greenAccent[300],
           },
           "& .MuiDataGrid-columnHeaders": {
-            backgroundColor: "#764abc ",
-            color: "white",
+            backgroundColor: colors.blueAccent[700],
             borderBottom: "none",
           },
           "& .MuiDataGrid-virtualScroller": {
-            backgroundColor: "transparent",
+            backgroundColor: colors.primary[400],
           },
           "& .MuiDataGrid-footerContainer": {
-            backgroundColor: "none ",
+            borderTop: "none",
+            backgroundColor: colors.blueAccent[700],
           },
           "& .MuiCheckbox-root": {
-            color: "none",
+            color: `${colors.greenAccent[200]} !important`,
           },
           "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
-            color: "#764abc",
+            color: `${colors.grey[100]} !important`,
           },
         }}
       >

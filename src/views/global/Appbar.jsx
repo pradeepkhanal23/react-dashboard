@@ -51,13 +51,13 @@ const Appbar = () => {
               <LightModeOutlinedIcon />
             )}
           </IconButton>
-          <IconButton sx={{ p: 1, color: "white " }}>
+          <IconButton>
             <NotificationsOutlinedIcon />
           </IconButton>
-          <IconButton sx={{ p: 1, color: "white " }}>
+          <IconButton>
             <SettingsOutlinedIcon />
           </IconButton>
-          <IconButton sx={{ p: 1, color: "white " }}>
+          <IconButton>
             <PersonOutlinedIcon />
           </IconButton>
         </Box>

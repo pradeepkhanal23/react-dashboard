@@ -10,8 +10,12 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { mockBarData as data } from "../data/mockData";
+import { useTheme } from "@mui/material";
+import { tokens } from "../../theme";
 
 const BarChart = () => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   return (
     <ResponsiveContainer width="100%" height="100%">
       <BarChartRecharts
