@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
-import { Sidebar as ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
+import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { useState } from "react";
 import { tokens } from "../../../theme";
+import "react-pro-sidebar/dist/css/styles.css";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
@@ -22,7 +23,6 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
   const colors = tokens(theme.palette.mode);
   return (
     <MenuItem
-      component={<Link to={to} />}
       active={selected === title}
       onClick={() => setSelected(title)}
       icon={icon}
@@ -31,6 +31,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
       }}
     >
       <Typography>{title}</Typography>
+      <Link to={to} />
     </MenuItem>
   );
 };
@@ -45,15 +46,28 @@ const Sidebar = () => {
     <>
       <Box
         sx={{
-          height: "100vh",
-          position: "sticky",
-          display: "flex",
-          top: 0,
-          bottom: 0,
-          zIndex: 100,
+          "& .pro-sidebar-inner": {
+            background: `${colors.primary[400]} !important`,
+          },
+          "& .pro-icon-wrapper": {
+            backgroundColor: "transparent !important",
+          },
+          "& .pro-inner-item": {
+            padding: "5px 35px 5px 20px !important",
+          },
+          "& .pro-inner-item:hover": {
+            color: "#868dfb !important",
+          },
+          "& .pro-menu-item.active": {
+            color: "#6870fa !important",
+          },
         }}
       >
-        <ProSidebar collapsed={isCollapsed} breakPoint="sm">
+        <ProSidebar
+          collapsed={isCollapsed}
+          breakPoint="sm"
+          // backgroundColor="colors.primary[400]"
+        >
           <Menu iconShape="square">
             {/* Logo and menu icon */}
             <MenuItem

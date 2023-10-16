@@ -20,7 +20,7 @@ const Dashboard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
-    <Box m="20px">
+    <Box p="20px">
       {/* HEADER */}
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Title title="DASHBOARD" subtitle="Welcome to your dashboard" />
@@ -45,9 +45,9 @@ const Dashboard = () => {
       <Box
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
-        gridAutoRows="154px"
+        gridAutoRows="153px"
+        // gridTemplateRows="repeat(4, 154px)"
         gap="20px"
-        p={2}
       >
         {/* ROW 1 */}
 
