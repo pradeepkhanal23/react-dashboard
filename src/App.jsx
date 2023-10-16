@@ -12,7 +12,7 @@ import Bar from "./views/bar";
 import Pie from "./views/pie";
 import Line from "./views/line";
 import Geo from "./views/geography";
-import { ThemeProvider } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "../theme";
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
+        <CssBaseline />
         <Router>
           <div className="app">
             <Sidebar />
