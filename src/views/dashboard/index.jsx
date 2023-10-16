@@ -25,9 +25,9 @@ const Dashboard = () => {
         <Box>
           <Button
             sx={{
-              fontSize: "20px",
+              fontSize: "16px",
               fontWeight: "bold",
-              padding: "10px 20px",
+              padding: "5px 10px",
             }}
           >
             <DownloadOutlinedIcon sx={{ mr: "10px" }} />
@@ -130,13 +130,13 @@ const Dashboard = () => {
               <Typography variant="h5" fontWeight="600">
                 Revenue Generated
               </Typography>
-              <Typography variant="h4" fontWeight="bold">
+              <Typography variant="h6" fontWeight="bold">
                 $59,342.32
               </Typography>
             </Box>
             <Box>
               <IconButton>
-                <DownloadOutlinedIcon sx={{ fontSize: "50px" }} />
+                <DownloadOutlinedIcon sx={{ fontSize: "30px" }} />
               </IconButton>
             </Box>
           </Box>
@@ -159,7 +159,7 @@ const Dashboard = () => {
             borderBottom={`3px solid green`}
             p="15px"
           >
-            <Typography variant="h5" fontWeight="600" textTransform="uppercase">
+            <Typography variant="h6" fontWeight="600" textTransform="uppercase">
               Recent Transactions
             </Typography>
           </Box>
@@ -173,7 +173,7 @@ const Dashboard = () => {
               p="15px"
             >
               <Box>
-                <Typography variant="h5" fontWeight="600">
+                <Typography variant="h6" fontWeight="600">
                   {transaction.txId}
                 </Typography>
                 <Typography>{transaction.user}</Typography>
@@ -194,7 +194,7 @@ const Dashboard = () => {
           boxShadow={customShadow}
           mt={5}
         >
-          <Typography variant="h5" fontWeight="600" textTransform="uppercase">
+          <Typography variant="h6" fontWeight="600" textTransform="uppercase">
             Campaign
           </Typography>
           <Box
@@ -212,7 +212,7 @@ const Dashboard = () => {
         </Box>
         <Box gridColumn="span 4" gridRow="span 2">
           <Typography
-            variant="h5"
+            variant="h6"
             fontWeight="600"
             textTransform="uppercase"
             sx={{ padding: "30px 30px 0 30px" }}
@@ -226,7 +226,7 @@ const Dashboard = () => {
         </Box>
         <Box gridColumn="span 4" gridRow="span 2" padding="10px">
           <Typography
-            variant="h5"
+            variant="h6"
             fontWeight="600"
             textTransform="uppercase"
             mb={2}

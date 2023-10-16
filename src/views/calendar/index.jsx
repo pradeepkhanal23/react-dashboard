@@ -1,27 +1,130 @@
 import React from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
-// import interactionPlugin from "@fullcalendar/interaction"; // needed for dayClick
-import { Box, List, ListItem, ListItemText, Typography } from "@mui/material";
+import timeGridPlugin from "@fullcalendar/timegrid";
+import interactionPlugin from "@fullcalendar/interaction"; // needed for dayClick
+import listPlugin from "@fullcalendar/list";
+import {
+  Box,
+  List,
+  ListItem,
+  ListItemText,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import Title from "../../components/Title";
+import { tokens } from "../../../theme";
+import { useState } from "react";
+import { formatDate } from "@fullcalendar/core";
 
 const Calendar = () => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+  const [currentEvents, setCurrentEvents] = useState([]);
+
+  const handleDateClick = (selected) => {
+    const title = prompt("Enter a title for your event");
+    const calendarApi = selected.view.calendar;
+    calendarApi.unselect();
+
+    if (title) {
+      calendarApi.addEvent({
+        id: `${selected.dateStr}-${title}`,
+        title,
+        start: selected.startStr,
+        end: selected.endStr,
+        allDay: selected.allDay,
+      });
+    }
+  };
+
+  const handleEventClick = (selected) => {
+    if (
+      window.confirm(
+        `Are you sure you want to delete the event '${selected.event.title}'`
+      )
+    ) {
+      selected.event.remove();
+    }
+  };
+
   return (
     <Box m="20px">
       <Title title="CALENDAR" subtitle="Full Calendar Interactive Page" />
       <Box display="flex" justifyContent="space-between" gap="30px">
-        {/* Calendar Sidebar */}
-        {/* <Box
+        {/* CALENDAR SIDEBAR */}
+        <Box
           flex="1 1 20%"
-          backgroundColor="#a8c1d1"
-          p="10px"
-          borderRadius="5px"
+          backgroundColor={colors.primary[400]}
+          p="15px"
+          borderRadius="4px"
         >
           <Typography variant="h5">Events</Typography>
-          <List></List>
-        </Box> */}
-        <Box>
-          <FullCalendar plugins={[dayGridPlugin]} initialView="dayGridMonth" />
+          <List>
+            {currentEvents.map((event) => (
+              <ListItem
+                key={event.id}
+                sx={{
+                  backgroundColor: colors.greenAccent[500],
+                  margin: "10px 0",
+                  borderRadius: "2px",
+                }}
+              >
+                <ListItemText
+                  primary={event.title}
+                  secondary={
+                    <Typography>
+                      {formatDate(event.start, {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })}
+                    </Typography>
+                  }
+                />
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+
+        {/* Main Calendar Section */}
+        <Box flex="1 1 100%" ml="15px">
+          <FullCalendar
+            height="75vh"
+            plugins={[
+              dayGridPlugin,
+              interactionPlugin,
+              listPlugin,
+              timeGridPlugin,
+            ]}
+            headerToolbar={{
+              left: "prev,next,today",
+              center: "title",
+              right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
+            }}
+            editable={true}
+            selectable={true}
+            selectMirror={true}
+            dayMaxEvents={true}
+            eventsSet={(events) => {
+              setCurrentEvents(events);
+            }}
+            initialView="dayGridMonth"
+            select={handleDateClick}
+            eventClick={handleEventClick}
+            initialEvents={[
+              {
+                id: "12315",
+                title: "All-day event",
+                date: "2023-10-14",
+              },
+              {
+                id: "5123",
+                title: "Timed event",
+                date: "2023-10-28",
+              },
+            ]}
+          />
         </Box>
       </Box>
     </Box>
