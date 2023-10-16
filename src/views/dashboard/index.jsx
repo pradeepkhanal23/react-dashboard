@@ -45,10 +45,13 @@ const Dashboard = () => {
       <Box
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
-        gridAutoRows="150px"
+        gridAutoRows="154px"
         gap="20px"
+        p={2}
       >
         {/* ROW 1 */}
+
+        {/* Email box */}
         <Box
           gridColumn="span 3"
           backgroundColor={colors.primary[400]}
@@ -72,6 +75,8 @@ const Dashboard = () => {
             }
           />
         </Box>
+
+        {/* Sales Obtained */}
         <Box
           gridColumn="span 3"
           backgroundColor={colors.primary[400]}
@@ -95,6 +100,8 @@ const Dashboard = () => {
             }
           />
         </Box>
+
+        {/* New Clients */}
         <Box
           gridColumn="span 3"
           backgroundColor={colors.primary[400]}
@@ -118,6 +125,8 @@ const Dashboard = () => {
             }
           />
         </Box>
+
+        {/* Traffic Received */}
         <Box
           gridColumn="span 3"
           backgroundColor={colors.primary[400]}
@@ -143,10 +152,13 @@ const Dashboard = () => {
         </Box>
 
         {/* ROW 2 */}
+
+        {/* Revenue Generated */}
         <Box
           gridColumn="span 8"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
+          boxShadow={customShadow}
         >
           <Box
             mt="25px"
@@ -179,10 +191,15 @@ const Dashboard = () => {
               </IconButton>
             </Box>
           </Box>
+
+          {/* Line Chart */}
           <Box height="250px" m="-20px 0 0 0">
             <LineChart />
           </Box>
         </Box>
+
+        {/* Recent Transaction */}
+
         <Box
           gridColumn="span 4"
           backgroundColor={colors.primary[400]}
@@ -190,7 +207,6 @@ const Dashboard = () => {
           overflow="auto"
           boxShadow={customShadow}
           padding="20px"
-          borderRadius="20px"
         >
           <Box
             display="flex"
@@ -232,7 +248,7 @@ const Dashboard = () => {
               </Box>
               <Box color={colors.grey[100]}>{transaction.date}</Box>
               <Box
-                backgroundColor={colors.greenAccent[500]}
+                backgroundColor={colors.greenAccent[700]}
                 p="5px 10px"
                 borderRadius="4px"
               >
@@ -258,12 +274,12 @@ const Dashboard = () => {
             display="flex"
             flexDirection="column"
             alignItems="center"
-            mt="25px"
+            mt="20px"
           >
-            <ProgressCircle size="125" />
+            <ProgressCircle size="100" />
             <Typography
               variant="h5"
-              sx={{ mt: "15px" }}
+              sx={{ mt: "20px" }}
               color={colors.greenAccent[500]}
             >
               $48,352 revenue generated
@@ -274,26 +290,30 @@ const Dashboard = () => {
         <Box
           gridColumn="span 4"
           gridRow="span 2"
+          p="10px 30px"
           backgroundColor={colors.primary[400]}
+          boxShadow={customShadow}
+          mt={5}
         >
           <Typography
             variant="h6"
             fontWeight="600"
             textTransform="uppercase"
-            sx={{ padding: "30px 30px 0 30px" }}
-            mb={3}
+            mb={4}
           >
             Sales Quantity
           </Typography>
-          <Box height="250px" mt="-20px">
+          <Box height="200px" mt="-20px">
             <BarChart />
           </Box>
         </Box>
         <Box
           gridColumn="span 4"
           gridRow="span 2"
-          padding="10px"
+          p="10px 30px"
           backgroundColor={colors.primary[400]}
+          boxShadow={customShadow}
+          mt={5}
         >
           <Typography
             variant="h6"
@@ -303,8 +323,8 @@ const Dashboard = () => {
           >
             Geography Based Traffic
           </Typography>
-          <Box height="200px">
-            <GeoChart />
+          <Box height="210px">
+            <GeoChart isDashboard={true} />
           </Box>
         </Box>
       </Box>
