@@ -72,7 +72,7 @@ const Sidebar = () => {
             " rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;",
         }}
       >
-        <ProSidebar collapsed={isCollapsed} breakPoint="sm">
+        <ProSidebar collapsed={isCollapsed} breakPoint="md">
           <Menu iconShape="square">
             {/* Logo and menu icon */}
             <MenuItem
@@ -89,8 +89,13 @@ const Sidebar = () => {
                   justifyContent="space-between"
                   alignItems="center"
                 >
-                  <Typography variant="h6" color={colors.grey[100]}>
-                    DASHBOARD
+                  <Typography
+                    variant="h4"
+                    color={colors.grey[100]}
+                    fontWeight="bold"
+                    textTransform="uppercase"
+                  >
+                    dashboard
                   </Typography>
                   <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                     {!isCollapsed ? <CloseIcon /> : <MenuOutlinedIcon />}
