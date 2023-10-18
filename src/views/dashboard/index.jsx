@@ -49,6 +49,7 @@ const Dashboard = () => {
               fontSize: "14px",
               fontWeight: "bold",
               padding: "10px 20px",
+              marginBottom: "10px",
             }}
           >
             <DownloadOutlinedIcon sx={{ mr: "10px" }} />
@@ -70,6 +71,9 @@ const Dashboard = () => {
             alignItems="center"
             justifyContent="center"
             height="10rem"
+            sx={{
+              boxShadow: customShadow,
+            }}
           >
             <StatBox
               title="12,361"
@@ -92,6 +96,9 @@ const Dashboard = () => {
             alignItems="center"
             justifyContent="center"
             height="10rem"
+            sx={{
+              boxShadow: customShadow,
+            }}
           >
             <StatBox
               title="431,225"
@@ -114,6 +121,9 @@ const Dashboard = () => {
             alignItems="center"
             justifyContent="center"
             height="10rem"
+            sx={{
+              boxShadow: customShadow,
+            }}
           >
             <StatBox
               title="32,441"
@@ -136,6 +146,9 @@ const Dashboard = () => {
             alignItems="center"
             justifyContent="center"
             height="10rem"
+            sx={{
+              boxShadow: customShadow,
+            }}
           >
             <StatBox
               title="1,325,134"
