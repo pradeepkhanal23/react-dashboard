@@ -18,6 +18,7 @@ import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import CloseIcon from "@mui/icons-material/Close";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
+import ProfileImage from "../../assets/images/UserImage.PNG";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -113,7 +114,7 @@ const Sidebar = () => {
                     alt="profile-user"
                     width="70px"
                     height="70px"
-                    src={`../../../src/assets/UserImage.PNG`}
+                    src={ProfileImage}
                     style={{
                       cursor: "pointer",
                       borderRadius: "50%",

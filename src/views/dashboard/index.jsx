@@ -150,212 +150,204 @@ const Dashboard = () => {
             />
           </Box>
         </Grid>
+      </Grid>
 
-        {/* Second Grid Container */}
-        <Grid
-          item
-          rowSpacing={1}
-          columnSpacing={{
-            xs: 1,
-            sm: 2,
-            md: 3,
-          }}
-          xs={12}
-          sm={12}
-          md={8}
-          lg={8}
-        >
-          {/* -----------Revenue Generated Line Chart-------------------------- */}
-          <Grid xs={12}>
+      {/* Second Grid Container */}
+      <Grid
+        container
+        rowSpacing={1}
+        columnSpacing={{
+          xs: 1,
+          sm: 2,
+          md: 3,
+        }}
+      >
+        <Grid item xs={12} sm={12} md={12} lg={8}>
+          <Box
+            backgroundColor={colors.primary[400]}
+            sx={{
+              boxShadow: customShadow,
+            }}
+          >
             <Box
-              backgroundColor={colors.primary[400]}
-              sx={{
-                boxShadow: customShadow,
-              }}
+              mt="25px"
+              p="0 30px"
+              display="flex "
+              justifyContent="space-between"
+              alignItems="center"
             >
-              <Box
-                mt="25px"
-                p="0 30px"
-                display="flex "
-                justifyContent="space-between"
-                alignItems="center"
-              >
-                <Box>
-                  <Typography
-                    variant="h5"
-                    fontWeight="600"
-                    color={colors.grey[100]}
-                    pt={2}
-                  >
-                    Revenue Generated
-                  </Typography>
-                  <Typography
-                    variant="h5"
-                    fontWeight="bold"
-                    color={colors.greenAccent[500]}
-                  >
-                    $59,342.32
-                  </Typography>
-                </Box>
-                <Box>
-                  <IconButton>
-                    <DownloadOutlinedIcon
-                      sx={{ fontSize: "26px", color: colors.greenAccent[500] }}
-                    />
-                  </IconButton>
-                </Box>
-              </Box>
-              <Box height="250px" m="-20px 0 0 0">
-                <LineChart isDashboard={true} />
-              </Box>
-            </Box>
-          </Grid>
-          {/* -----------Revenue Generated Line Chart End-------------------------- */}
-
-          {/* -----------------------------Campaign Box Start------------------------------------------ */}
-          <Grid xs={12} sm={12} md={6}>
-            <Box
-              backgroundColor={colors.primary[400]}
-              p="30px"
-              sx={{
-                boxShadow: customShadow,
-              }}
-              margin="20px 0px"
-            >
-              <Typography variant="h5" fontWeight="600">
-                Campaign
-              </Typography>
-              <Box
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-                mt="25px"
-              >
-                <ProgressCircle size="125" />
+              <Box>
                 <Typography
                   variant="h5"
-                  color={colors.greenAccent[500]}
-                  sx={{ mt: "15px" }}
+                  fontWeight="600"
+                  color={colors.grey[100]}
+                  pt={2}
                 >
-                  $48,352 revenue generated
+                  Revenue Generated
                 </Typography>
-                <Typography>
-                  Includes extra misc expenditures and costs
+                <Typography
+                  variant="h5"
+                  fontWeight="bold"
+                  color={colors.greenAccent[500]}
+                >
+                  $59,342.32
                 </Typography>
               </Box>
-            </Box>
-          </Grid>
-          {/* ------------------------------Campaign Box End------------------------------------------ */}
-
-          {/* --------------------Sales Quantity Box Start------------------------------------------ */}
-          <Grid xs={12} sm={12} md={6}>
-            <Box
-              backgroundColor={colors.primary[400]}
-              p="30px"
-              sx={{
-                boxShadow: customShadow,
-              }}
-              margin="20px 0px"
-            >
-              <Typography
-                variant="h5"
-                fontWeight="600"
-                sx={{ padding: "30px 30px 0 30px" }}
-              >
-                Sales Quantity
-              </Typography>
-              <Box height="250px" mt="-20px">
-                <BarChart isDashboard={true} />
+              <Box>
+                <IconButton>
+                  <DownloadOutlinedIcon
+                    sx={{ fontSize: "26px", color: colors.greenAccent[500] }}
+                  />
+                </IconButton>
               </Box>
             </Box>
-          </Grid>
-          {/* --------------------Sales Quantity Box End------------------------------------------ */}
-
-          {/* ------------------------------------------Geo Chart Start-------------------------- */}
-          <Grid xs={12}>
-            <Box
-              backgroundColor={colors.primary[400]}
-              p="30px"
-              sx={{
-                boxShadow: customShadow,
-              }}
-              margin="20px 0px"
-            >
-              <Typography
-                variant="h5"
-                fontWeight="600"
-                sx={{ marginBottom: "15px" }}
-              >
-                Geography Based Traffic
-              </Typography>
-              <Box height="200px">
-                <GeoChart isDashboard={true} />
-              </Box>
+            <Box height="250px" m="-20px 0 0 0">
+              <LineChart isDashboard={true} />
             </Box>
-          </Grid>
-          {/* ------------------------------------------Geo Chart End-------------------------- */}
+          </Box>
 
-          <Grid xs={12} sm={12} md={4} lg={4} xl={4}>
-            {/* -----------Recent Transactions-------------------------- */}
-            <Box
-              backgroundColor={colors.primary[400]}
-              overflow="auto"
-              sx={{
-                boxShadow: customShadow,
-              }}
-              mt={3}
-            >
+          <Grid
+            container
+            rowSpacing={1}
+            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+          >
+            <Grid item xs={12} sm={12} md={6} lg={6}>
               <Box
+                backgroundColor={colors.primary[400]}
+                p="30px"
+                sx={{
+                  boxShadow: customShadow,
+                }}
+                margin="20px 0px"
+              >
+                <Typography
+                  variant="h5"
+                  fontWeight="600"
+                  sx={{ marginBottom: "15px" }}
+                >
+                  Geography Based Traffic
+                </Typography>
+                <Box height="200px">
+                  <GeoChart isDashboard={true} />
+                </Box>
+              </Box>
+            </Grid>
+
+            <Grid item xs={12} sm={12} md={6} lg={6}>
+              <Box
+                backgroundColor={colors.primary[400]}
+                p="30px"
+                sx={{
+                  boxShadow: customShadow,
+                }}
+                margin="20px 0px"
+                height="18.5rem"
+              >
+                <Typography variant="h5" fontWeight="600">
+                  Campaign
+                </Typography>
+                <Box
+                  display="flex"
+                  flexDirection="column"
+                  alignItems="center"
+                  mt="25px"
+                >
+                  <ProgressCircle size="125" />
+                  <Typography
+                    variant="h5"
+                    color={colors.greenAccent[500]}
+                    sx={{ mt: "10px" }}
+                  >
+                    $48,352 revenue generated
+                  </Typography>
+                  <Typography>
+                    Includes extra misc expenditures and costs
+                  </Typography>
+                </Box>
+              </Box>
+            </Grid>
+
+            <Grid item xs={12} sm={12} md={12} lg={12}>
+              <Box
+                backgroundColor={colors.primary[400]}
+                p="30px"
+                sx={{
+                  boxShadow: customShadow,
+                }}
+                // margin="20px 0px"
+              >
+                <Typography
+                  variant="h5"
+                  fontWeight="600"
+                  sx={{ padding: "30px 30px 0 30px" }}
+                >
+                  Sales Quantity
+                </Typography>
+                <Box height="250px" mt="-20px">
+                  <BarChart isDashboard={true} />
+                </Box>
+              </Box>
+            </Grid>
+          </Grid>
+        </Grid>
+
+        <Grid item xs={12} sm={12} md={12} lg={4}>
+          <Box
+            backgroundColor={colors.primary[400]}
+            overflow="auto"
+            sx={{
+              boxShadow: customShadow,
+            }}
+            mt={3}
+          >
+            <Box
+              display="flex"
+              justifyContent="space-between"
+              alignItems="center"
+              borderBottom={`4px solid ${colors.primary[500]}`}
+              colors={colors.grey[100]}
+              p="15px"
+            >
+              <Typography
+                color={colors.grey[100]}
+                variant="h5"
+                fontWeight="600"
+              >
+                Recent Transactions
+              </Typography>
+            </Box>
+            {mockTransactions.map((transaction, i) => (
+              <Box
+                key={`${transaction.txId}-${i}`}
                 display="flex"
                 justifyContent="space-between"
                 alignItems="center"
                 borderBottom={`4px solid ${colors.primary[500]}`}
-                colors={colors.grey[100]}
                 p="15px"
               >
-                <Typography
-                  color={colors.grey[100]}
-                  variant="h5"
-                  fontWeight="600"
-                >
-                  Recent Transactions
-                </Typography>
-              </Box>
-              {mockTransactions.map((transaction, i) => (
-                <Box
-                  key={`${transaction.txId}-${i}`}
-                  display="flex"
-                  justifyContent="space-between"
-                  alignItems="center"
-                  borderBottom={`4px solid ${colors.primary[500]}`}
-                  p="15px"
-                >
-                  <Box>
-                    <Typography
-                      color={colors.greenAccent[500]}
-                      variant="h5"
-                      fontWeight="600"
-                    >
-                      {transaction.txId}s
-                    </Typography>
-                    <Typography color={colors.grey[100]}>
-                      {transaction.user}
-                    </Typography>
-                  </Box>
-                  <Box color={colors.grey[100]}>{transaction.date}</Box>
-                  <Box
-                    backgroundColor={colors.greenAccent[700]}
-                    p="5px 10px"
-                    borderRadius="4px"
+                <Box>
+                  <Typography
+                    color={colors.greenAccent[500]}
+                    variant="h5"
+                    fontWeight="600"
                   >
-                    ${transaction.cost}
-                  </Box>
+                    {transaction.txId}s
+                  </Typography>
+                  <Typography color={colors.grey[100]}>
+                    {transaction.user}
+                  </Typography>
                 </Box>
-              ))}
-            </Box>
-
-            {/* -----------Recent Transactions End-------------------------- */}
-          </Grid>
+                <Box color={colors.grey[100]}>{transaction.date}</Box>
+                <Box
+                  backgroundColor={colors.greenAccent[700]}
+                  p="5px 10px"
+                  borderRadius="4px"
+                >
+                  ${transaction.cost}
+                </Box>
+              </Box>
+            ))}
+          </Box>
         </Grid>
       </Grid>
     </Box>
