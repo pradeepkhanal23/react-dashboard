@@ -17,3 +17,10 @@ body,
   display: flex;
   position: relative;
 }
+
+/* Custom header font size */
+.fc .fc-toolbar-title {
+  font-size: 1rem;
+  text-align: center;
+  margin: 0rem 0.3rem;
+}

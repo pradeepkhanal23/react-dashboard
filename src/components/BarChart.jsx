@@ -42,11 +42,12 @@ const BarChart = ({ isDashboard = false }) => {
       }}
       keys={["hot dog", "burger", "sandwich", "kebab", "fries", "donut"]}
       indexBy="country"
-      margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
-      padding={0.3}
+      margin={{ top: 50, right: 100, bottom: 50, left: 60 }}
+      padding={0.4}
       valueScale={{ type: "linear" }}
       indexScale={{ type: "band", round: true }}
       colors={{ scheme: "nivo" }}
+      isInteractive={true}
       defs={[
         {
           id: "dots",

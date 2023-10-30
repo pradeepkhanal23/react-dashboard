@@ -51,7 +51,12 @@ const Calendar = () => {
   return (
     <Box m="20px">
       <Title title="CALENDAR" subtitle="Full Calendar Interactive Page" />
-      <Box display="flex" justifyContent="space-between" gap="30px">
+      <Box
+        display="flex"
+        justifyContent="space-between"
+        gap="30px"
+        flexDirection={{ xs: "column", md: "row" }}
+      >
         {/* CALENDAR SIDEBAR */}
         <Box
           flex="1 1 20%"
@@ -98,9 +103,9 @@ const Calendar = () => {
               timeGridPlugin,
             ]}
             headerToolbar={{
-              left: "prev,next,today",
+              left: "prev,next",
               center: "title",
-              right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek",
+              right: "dayGridMonth,timeGridWeek,timeGridDay",
             }}
             editable={true}
             selectable={true}

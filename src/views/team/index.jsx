@@ -44,8 +44,8 @@ const Team = () => {
         return (
           <>
             <Box
-              width="60%"
-              p="5px"
+              width="fit-content"
+              p=".5rem 1rem"
               display="flex"
               justifyContent="center"
               backgroundColor={

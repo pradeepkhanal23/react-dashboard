@@ -180,6 +180,10 @@ const Dashboard = () => {
             backgroundColor={colors.primary[400]}
             sx={{
               boxShadow: customShadow,
+              display: {
+                xs: "none",
+                md: "block",
+              },
             }}
           >
             <Box
@@ -283,9 +287,11 @@ const Dashboard = () => {
             <Grid item xs={12} sm={12} md={12} lg={12}>
               <Box
                 backgroundColor={colors.primary[400]}
-                p="30px"
                 sx={{
                   boxShadow: customShadow,
+                  padding: {
+                    md: "30px",
+                  },
                 }}
                 // margin="20px 0px"
               >
